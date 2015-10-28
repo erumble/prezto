@@ -10,4 +10,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Color ls
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
 # Customize to your needs...
+alias ls='ls -alh'
+
