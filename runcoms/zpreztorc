@@ -23,18 +23,28 @@ zstyle ':prezto:*:*' color 'yes'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
+
+# 'environment' must be loaded first
+# 'completion' must be after 'utility'
+# 'history-substring-search' must be after 'syntax-highlighting'
+# 'autosuggestions' must be after 'history-substring-search'
+
 zstyle ':prezto:load' pmodule \
   'environment' \
-  'terminal' \
-  'editor' \
-  'history' \
+  'archive' \
   'directory' \
-  'spectrum' \
-  'utility' \
-  'completion' \
+  'editor' \
+  'git' \
+  'history' \
   'prompt' \
   'ruby' \
-  'git'
+  'spectrum' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+  'autosuggestions' \
+  'terminal' \
+  'utility' \
+  'completion'
 
 #
 # Autosuggestions
