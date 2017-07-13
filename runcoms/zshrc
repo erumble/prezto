@@ -10,6 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Set default editor to vim
+export VISUAL=vim
+
 # Color ls
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -21,3 +24,9 @@ alias ls='ls -alh'
 if command -v fuck >/dev/null 2>&1; then
   eval $(thefuck --alias)
 fi
+
+# setup rbenv if available
+if command -v rbenv >/dev/null 2>&1; then
+  eval "$(rbenv init -)"
+fi
+
