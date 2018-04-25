@@ -10,9 +10,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Set default editor to vim
-export VISUAL=vim
-
 # Color ls
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
