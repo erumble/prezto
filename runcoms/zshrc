@@ -26,3 +26,8 @@ if command -v rbenv >/dev/null 2>&1; then
   eval "$(rbenv init -)"
 fi
 
+# setup HashiCorp VagrantCloud (used to be Atlas)
+if [[ -s "${HOME}/.vagrantcloud" ]]; then
+  export ATLAS_TOKEN=$(cat $HOME/.vagrantcloud)
+fi
+
