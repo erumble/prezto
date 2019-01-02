@@ -18,11 +18,10 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 if command -v go &>/dev/null; then
   export GOPATH=$(go env GOPATH)
   export PATH=$PATH:$(go env GOPATH)/bin
-  gocd() { cd $(go list -f '{{.Dir}}' $1) }
 fi
 
 # setup rbenv if available
-if command -v rbenv >/dev/null 2>&1; then
+if command -v rbenv &>/dev/null; then
   eval "$(rbenv init -)"
 fi
 
