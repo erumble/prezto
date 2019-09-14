@@ -29,4 +29,3 @@ fi
 if [[ -s "${HOME}/.vagrantcloud" ]]; then
   export ATLAS_TOKEN=$(cat $HOME/.vagrantcloud)
 fi
-
