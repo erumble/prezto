@@ -16,8 +16,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Go env vars
 if command -v go &>/dev/null; then
-  export GOPATH=$(go env GOPATH)
-  export PATH=$PATH:$(go env GOPATH)/bin
+  go env -w GOPATH=$HOME/go
 fi
 
 # setup rbenv if available
@@ -29,3 +28,8 @@ fi
 if [[ -s "${HOME}/.vagrantcloud" ]]; then
   export ATLAS_TOKEN=$(cat $HOME/.vagrantcloud)
 fi
+
+#
+# Aliases
+#
+alias gotree="tree -I vendor"
