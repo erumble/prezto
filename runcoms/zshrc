@@ -29,7 +29,10 @@ if [[ -s "${HOME}/.vagrantcloud" ]]; then
   export ATLAS_TOKEN=$(cat $HOME/.vagrantcloud)
 fi
 
-#
+# setup kubectl autocompletion
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh);
+fi
+
 # Aliases
-#
 alias gotree="tree -I vendor"
